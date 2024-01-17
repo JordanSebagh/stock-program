@@ -62,24 +62,6 @@ def acquire_user_input():
     return user_name, ticker, year1, month1, year2, month2, interval, start_date, end_date
 
 
-# def get_earliest_year(ticker):
-#     url = f'https://query1.finance.yahoo.com/v7/finance/download/{ticker}'
-
-#     params = {'period1': 0, 'period2': int(
-#         datetime.datetime.now().timestamp()), 'interval': '1d'}
-#     response = requests.get(url, params=params)
-
-#     lines = response.text.strip().splitlines()
-#     header = lines[0]
-
-#     earliest_date_str = lines[-1].split(',')[0]
-
-#     earliest_date = datetime.datetime.strptime(
-#         earliest_date_str, "%r")
-
-#     return earliest_date.year
-
-
 def validate_stock_ticker(ticker):
     url = f'https://www.cnbc.com/quotes/{ticker}'
     try:
