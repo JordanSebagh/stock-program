@@ -25,24 +25,6 @@ def acquire_user_input():
     year1 = int(
         input('Please enter the year of which to begin our data analysis: '))
 
-    # while True:
-    #     try:
-    #         interval = '1d'
-
-    #         period1 = int(time.mktime(datetime.datetime(
-    #             year1, 1, 1, 23, 59).timetuple()))
-
-    #         # Replace 2023 with current year /////////
-    #         period2 = int(time.mktime(datetime.datetime(
-    #             2023, 1, 1, 23, 59).timetuple()))
-
-    #         url = f'https://query1.finance.yahoo.com/v7/finance/download/{ticker}?period1={period1}&period2={period2}&interval={interval}&events=history&includeAdjustedClose=true'
-
-    #         out = pd.read_csv(url)
-    #         print(out)
-    #     except:
-    #         year1 = input('Error: Please enter a valid year: ')
-
     month1 = int(
         input('Please enter the month of which to begin our data analysis (1-12): '))
     while month1 < 1 or month1 > 12:
